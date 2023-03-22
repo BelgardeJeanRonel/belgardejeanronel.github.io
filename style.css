@@ -354,12 +354,6 @@ a{
         display: none;
     }
 
-    .modal{
-        display: block;
-        position: static;
-        background-color: transparent; 
-    }
-
     .link-header{
         background: none;
         padding: 0px;
