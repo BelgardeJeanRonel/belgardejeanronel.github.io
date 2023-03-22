@@ -10,7 +10,6 @@ const handleIntersect = function (entries, observer) {
         if (entry.intersectionRatio > ratio){
             entry.target.classList.remove("reveal")
             observer.unobserve(entry.target)
-            console.log("visible");
         }
     })
 }
@@ -24,11 +23,15 @@ document.querySelectorAll('.reveal').forEach( r => {
 
 const iconOpenMenu = document.querySelector(".icon-open-menu");
 const menuModal = document.querySelector(".modal");
-let scrollY;
+const linkHeader = document.querySelector(".link-header");
+
 
 iconOpenMenu.addEventListener("click", function() {
 
     menuModal.classList.toggle("show-modal");
+    linkHeader.classList.toggle("show-modal");
+
+
     iconOpenMenu.animate([
         { transform: 'scale(0)' },
         { transform: 'scale(1.5)' }
@@ -36,21 +39,19 @@ iconOpenMenu.addEventListener("click", function() {
         duration: 600
         }
     )
-
-    scrollY = window.scrollY;
-    
-    document.body.style.position = "fixed";
-    document.body.style.top = `-${scrollY}px`;
-    scrollY = document.body.style.top;
     
 })
 
 const iconCloseMenu = document.querySelector(".icon-close-menu");
 iconCloseMenu.addEventListener("click", function() {
     menuModal.classList.toggle("show-modal");
+    linkHeader.classList.toggle("show-modal");
 
-    document.body.style.position = "static";
-    scrollY = document.body.style.top;
-    window.scrollTo(0, parseInt(scrollY ?? '0') * -1);
 
+    linkHeader.animate([
+        { transform: 'translate(0)'},
+        { transform: 'translate(200%)'},
+      ], {
+        duration: 300,
+    })
 })
