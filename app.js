@@ -55,3 +55,15 @@ iconCloseMenu.addEventListener("click", function() {
         duration: 300,
     })
 })
+
+menuModal.addEventListener("click", function(){
+    menuModal.classList.toggle("show-modal");
+    linkHeader.classList.toggle("show-modal");
+
+    linkHeader.animate([
+        { transform: 'translate(0)'},
+        { transform: 'translate(200%)'},
+      ], {
+        duration: 300,
+    })
+})
