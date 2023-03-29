@@ -500,7 +500,7 @@ a{
 
 /* =================== APPARITION AU DEFILLEMENT ==================== */
 
-.reveal-loaded .reveal [class*="reveal-"]{
+.reveal-loaded .reveal[class*="reveal-"]{
     opacity: 0 !important;
     -webkit-transform: translateY(30px) !important;
         -ms-transform: translateY(30px) !important;
@@ -510,10 +510,12 @@ a{
     transition: 0s !important;
 }
 
+
 .reveal-loaded [class*="reveal-"]{
     -webkit-transition: 1s cubic-bezier(.5, 0, 0, 1);
     -o-transition: 1s cubic-bezier(.5, 0, 0, 1);
     transition: 1s cubic-bezier(.5, 0, 0, 1);
+
 }
 
 .reveal-loaded .reveal-2{
@@ -523,15 +525,15 @@ a{
 }
 
 .reveal-loaded .reveal-3{
-    -webkit-transition-delay: .2s;
-         -o-transition-delay: .2s;
-            transition-delay: .2s;
-}
-
-.reveal-loaded .reveal-4{
     -webkit-transition-delay: .3s;
          -o-transition-delay: .3s;
             transition-delay: .3s;
+}
+
+.reveal-loaded .reveal-4{
+    -webkit-transition-delay: .5s;
+         -o-transition-delay: .5s;
+            transition-delay: .5s;
 }
 
 
