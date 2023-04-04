@@ -499,7 +499,7 @@ a{
 
 
 /* =================== APPARITION AU DEFILLEMENT ==================== */
-
+/* 
 .reveal-loaded .reveal[class*="reveal-"]{
     opacity: 0 !important;
     -webkit-transform: translateY(30px) !important;
@@ -534,7 +534,7 @@ a{
     -webkit-transition-delay: .5s;
          -o-transition-delay: .5s;
             transition-delay: .5s;
-}
+} */
 
 
 
